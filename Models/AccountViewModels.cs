@@ -8,6 +8,14 @@ namespace Movie_Store_MVC_5.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "Driving Licence")]
+        public string DrivingLicence { get; set; }
+
+        [Required]
+        [Display(Name = "Phone")]
+        public string Phone { get; set; }
     }
 
     public class ExternalLoginListViewModel
@@ -79,6 +87,14 @@ namespace Movie_Store_MVC_5.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "Driving Licence")]
+        public string DrivingLicence { get; set; }
+
+        [Required]
+        [Display(Name = "Phone")]
+        public string Phone { get; set; }
     }
 
     public class ResetPasswordViewModel

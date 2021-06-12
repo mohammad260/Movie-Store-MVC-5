@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Movie_Store_MVC_5.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         public ActionResult Index()
