@@ -23,8 +23,12 @@ namespace Movie_Store_MVC_5.Controllers
         }
         public ViewResult Index()
         {
-            return View();
+            if (User.IsInRole(RoleName.canManageMovies))
+                return View("List"); 
+            return View("ReadOnlyList");
         }
+
+        [Authorize(Roles = RoleName.canManageMovies)]
         public ActionResult New()
         {
             var genres = _context.Genres.ToList();
@@ -35,6 +39,7 @@ namespace Movie_Store_MVC_5.Controllers
 
             return View("MovieForm", viewModel);
         }
+
         public ActionResult Details(int id)
         {
             var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
@@ -43,6 +48,8 @@ namespace Movie_Store_MVC_5.Controllers
                 return HttpNotFound();
             return View(movie);
         }
+
+        [Authorize(Roles = RoleName.canManageMovies)]
         public ActionResult Edit(int id)
         {
             var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
@@ -59,6 +66,7 @@ namespace Movie_Store_MVC_5.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.canManageMovies)]
         public ActionResult Save(Movie movie)
         {
             if (!ModelState.IsValid)
