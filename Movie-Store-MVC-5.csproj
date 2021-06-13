@@ -270,10 +270,6 @@
     <Compile Include="Migrations\202106110841259_InitialModel.designer.cs">
       <DependentUpon>202106110841259_InitialModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202106110850353_PopulateMembershipTypes.cs" />
-    <Compile Include="Migrations\202106110850353_PopulateMembershipTypes.designer.cs">
-      <DependentUpon>202106110850353_PopulateMembershipTypes.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202106110910568_AddGenres.cs" />
     <Compile Include="Migrations\202106110910568_AddGenres.designer.cs">
       <DependentUpon>202106110910568_AddGenres.cs</DependentUpon>
@@ -289,6 +285,14 @@
     <Compile Include="Migrations\202106120908261_AddPhoneToApplicationUser.cs" />
     <Compile Include="Migrations\202106120908261_AddPhoneToApplicationUser.designer.cs">
       <DependentUpon>202106120908261_AddPhoneToApplicationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106130905188_createMembershipTypeTable.cs" />
+    <Compile Include="Migrations\202106130905188_createMembershipTypeTable.designer.cs">
+      <DependentUpon>202106130905188_createMembershipTypeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106130913471_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\202106130913471_PopulateMembershipTypes.designer.cs">
+      <DependentUpon>202106130913471_PopulateMembershipTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -569,9 +573,6 @@
     <EmbeddedResource Include="Migrations\202106110841259_InitialModel.resx">
       <DependentUpon>202106110841259_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106110850353_PopulateMembershipTypes.resx">
-      <DependentUpon>202106110850353_PopulateMembershipTypes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106110910568_AddGenres.resx">
       <DependentUpon>202106110910568_AddGenres.cs</DependentUpon>
     </EmbeddedResource>
@@ -583,6 +584,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106120908261_AddPhoneToApplicationUser.resx">
       <DependentUpon>202106120908261_AddPhoneToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106130905188_createMembershipTypeTable.resx">
+      <DependentUpon>202106130905188_createMembershipTypeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106130913471_PopulateMembershipTypes.resx">
+      <DependentUpon>202106130913471_PopulateMembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

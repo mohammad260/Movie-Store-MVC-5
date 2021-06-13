@@ -7,13 +7,13 @@ namespace Movie_Store_MVC_5.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class PopulateMembershipTypes : IMigrationMetadata
+    public sealed partial class createMembershipTypeTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(PopulateMembershipTypes));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(createMembershipTypeTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "202106110850353_PopulateMembershipTypes"; }
+            get { return "202106130905188_createMembershipTypeTable"; }
         }
         
         string IMigrationMetadata.Source

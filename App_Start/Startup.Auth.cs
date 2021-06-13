@@ -54,9 +54,9 @@ namespace Movie_Store_MVC_5
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            app.UseFacebookAuthentication(
+            /*app.UseFacebookAuthentication(
                appId: "2956423741303012",
-               appSecret: "");
+               appSecret: "");*/
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
