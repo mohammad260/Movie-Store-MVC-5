@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Movie_Store_MVC_5.Models;
 using Movie_Store_MVC_5.ViewModels;
 using System.Data.Entity;
+using System.Runtime.Caching;
 
 namespace Movie_Store_MVC_5.Controllers
 {
@@ -20,6 +21,11 @@ namespace Movie_Store_MVC_5.Controllers
         protected override void Dispose(bool disposing)
         {
             _context.Dispose();
+        }
+
+        public ViewResult Index()
+        {
+            return View();
         }
 
         public ActionResult New()
@@ -61,11 +67,6 @@ namespace Movie_Store_MVC_5.Controllers
             _context.SaveChanges();
 
             return RedirectToAction("Index", "Customers");
-        }
-
-        public ViewResult Index()
-        {
-            return View();
         }
 
         public ActionResult Details(int id)
